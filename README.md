@@ -31,7 +31,7 @@ Including an example of how to use your role (for instance, with variables passe
 
 ## License
 
-GPL v3
+[`AGPL-3.0-or-later`](LICENSE)
 
 ## Author Information
 
