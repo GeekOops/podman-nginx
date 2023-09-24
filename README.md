@@ -5,6 +5,10 @@ Installs a `nginx` podman container as system service.
 The configuration template is similar to a typical openSUSE installation with virtual hosts being present in `vhosts.d`.
 The configuration location by default is `/etc/nginx`, but can be configured.
 
+## Requirements
+
+Basic ansible, no further dependencies or requirements are needed.
+
 ## Variables
 
 | Variable | Default | Description |
@@ -12,6 +16,7 @@ The configuration location by default is `/etc/nginx`, but can be configured.
 | `nginx_container_image` | docker.io/library/nginx:stable | Container image |
 | `nginx_service_name` |  nginx | Systemd service name |
 | `nginx_container_name` | nginx | Name of the podman container |
+| `nginx_auto_pull` | true | Pull the container before creating it in the systemd unit |
 | `nginx_auto_update` | true | Apply the auto-update label for podman |
 | `nginx_mem_limit` | 64M | Memory limit for nginx |
 | `nginx_health_check` | true | If true, add a --healthcheck to the systemd service - we use `curl` on the container localhost |

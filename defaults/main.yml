@@ -4,6 +4,7 @@
 nginx_container_image: 'docker.io/library/nginx:stable'
 nginx_service_name: 'nginx'
 nginx_container_name: 'nginx'
+nginx_auto_pull: true
 nginx_auto_update: true
 nginx_mem_limit: '64M'
 nginx_health_check: true

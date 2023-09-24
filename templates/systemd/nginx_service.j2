@@ -10,7 +10,9 @@ Restart=always
 RestartSec=30
 TimeoutStopSec=70
 ExecStartPre=/bin/rm -f %t/%n.ctr-id
+{% if nginx_auto_pull == true %}
 ExecStartPre=/usr/bin/podman pull {{ nginx_container_image }}
+{% endif %}
 ExecStart=/usr/bin/podman run \
     --cidfile=%t/%n.ctr-id --cgroups=no-conmon --rm --sdnotify=conmon -d --replace -ti \
     --name {{ nginx_container_name }} \
