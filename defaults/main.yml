@@ -1,0 +1,16 @@
+---
+# defaults file for podman-nginx
+
+nginx_container_image: 'docker.io/library/nginx:stable'
+nginx_service_name: 'nginx'
+nginx_container_name: 'nginx'
+nginx_auto_update: true
+nginx_mem_limit: '64M'
+nginx_health_check: true
+nginx_default_conf: true
+
+nginx_data_dir: '/srv/www'
+nginx_conf_dir: '/etc/nginx'
+nginx_log_directory: ''
+
+nginx_network: 'host'

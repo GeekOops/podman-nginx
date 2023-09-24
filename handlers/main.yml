@@ -1,0 +1,7 @@
+---
+# handlers file for podman-nginx
+
+- name: restart nginx
+  systemd:
+    name: "{{nginx_service_name}}"
+    state: restarted
