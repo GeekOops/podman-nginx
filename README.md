@@ -18,7 +18,7 @@ The configuration location by default is `/etc/nginx`, but can be configured.
 | `nginx_default_conf` | true | If true, we install the `default.conf` in `vhosts.d` |
 | `nginx_data_dir` | /srv/www | Default location for www content to be served |
 | `nginx_conf_dir` | /etc/nginx | Configuration directory for nginx |
-| `nginx_log_directory` | '' | If defined, mount this directory for storing log files |
+| `nginx_log_directory` | | If defined, mount this directory for storing log files |
 | `nginx_network` | 'host' | podman network to be used |
 
 ## Example Playbook
