@@ -1,2 +1,7 @@
 ---
 # vars file for podman-nginx
+
+nginx_container_image: 'docker.io/library/nginx:stable'
+nginx_data_dir: '/srv/www'
+nginx_conf_dir: '/etc/nginx'
+nginx_log_directory: ''
