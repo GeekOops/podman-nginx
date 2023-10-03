@@ -5,7 +5,7 @@ galaxy_info:
 
   issue_tracker_url: https://github.com/GeekOops/podman-nginx/issues
 
-  license: AGPL-3.0-or-later
+  license: MIT
 
   min_ansible_version: 2.1
 
