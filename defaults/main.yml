@@ -9,3 +9,5 @@ nginx_mem_limit: '64M'
 nginx_health_check: true
 nginx_default_conf: true
 nginx_network: 'host'
+nginx_container_ip: ''
+nginx_publish: []

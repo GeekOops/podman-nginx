@@ -25,14 +25,30 @@ Basic ansible, no further dependencies or requirements are needed.
 | `nginx_conf_dir` | /etc/nginx | Configuration directory for nginx |
 | `nginx_log_directory` | | If defined, mount this directory for storing log files |
 | `nginx_network` | host | podman network to be used |
+| `nginx_container_ip` | '' | If not empty, assign the following container ip address. Use together with `nginx_network`. |
+| `nginx_publish` | `[]` | List of publish statements added to the container. |
 
 ## Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - role: podman-nginx
+```yaml
+- hosts: servers
+  roles:
+     - role: podman-nginx
+```
+
+A More extended example
+
+```yaml
+- hosts: all
+  roles:
+    - role: podman-nginx
+      vars:
+        - nginx_network: 'podman'
+        - nginx_container_ip: '10.88.0.101'
+        - nginx_publish: ['0.0.0.0:80:80']
+```
 
 ## License
 

@@ -18,6 +18,12 @@ ExecStart=/usr/bin/podman run \
     --name {{ nginx_container_name }} \
     --hostname {{ nginx_container_name }} \
     --network {{ nginx_network }} \
+{% if nginx_container_ip != "" %}
+    --ip {{ nginx_container_ip }} \
+{% endif %}
+{% for publish in nginx_publish %}
+    --publish {{ publish }} \
+{% endfor %}
     -v {{ nginx_data_dir }}:/srv/www:z \
     -v {{ nginx_conf_dir }}:/etc/nginx:ro,Z \
 {% if nginx_log_directory != "" %}
