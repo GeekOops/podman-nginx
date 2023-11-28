@@ -38,7 +38,7 @@ Including an example of how to use your role (for instance, with variables passe
      - role: podman-nginx
 ```
 
-A More extended example
+An extended example
 
 ```yaml
 - hosts: all
